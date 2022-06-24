@@ -1,0 +1,9 @@
+<h1><%= @book.name %></h1>
+
+<li>書名:<%= @book.name %></li>
+<li>出版日期:<%= @book.date %></li>
+<li>售價：<%= @book.price %></li>
+<li>頁數:<%= @book.pages %></li>
+<li>ISBN:<%= @book.ISBN %></li>
+
+<%= link_to '編輯', edit_book_path %>

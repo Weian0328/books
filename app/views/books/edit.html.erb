@@ -1,0 +1,25 @@
+<h1>編輯書籍</h1>
+
+<%= form_with(model:@book) do |form| %>
+    <div>      
+        <%= form.label :name, "書名" %>
+        <%= form.text_field :name %>
+    </div>
+    <div>      
+        <%= form.label :date, "出版日期" %>
+        <%= form.date_field :date, max: Date.today %>
+    </div>
+    <div>      
+        <%= form.label :price, "售價" %>
+        <%= form.number_field :price, min: 1 %>
+    </div>
+    <div>      
+        <%= form.label :pages, "頁數" %>
+        <%= form.number_field :pages, min: 1 %>
+    </div>
+    <div>      
+        <%= form.label :ISBN, "ISBN" %>
+        <%= form.text_field :ISBN %>
+    </div>
+    <%= form.submit %>
+<% end %>
